@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1>🤖 Arc Autonomous Agent Vault</h1>
 
-## Getting Started
+<p>An autonomous, verifiable multi-agent protocol on <b>Arc Testnet</b> that decouples off-chain LLM reasoning from on-chain execution using cryptographic intent verification (<code>Keccak256</code>) and delegated Session Keys.</p>
 
-First, run the development server:
+<p><b>🌐 Live Demo:</b> <a href="https://arc-verifiable-ai-agent.vercel.app">https://arc-verifiable-ai-agent.vercel.app</a></p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<hr />
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h2>🌟 Key Architecture & Swarm Pipeline</h2>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<ul>
+  <li><b>1. Sentinel Node (Telemetry):</b> Continuously polls Arc RPC nodes to stream real-time DEX liquidity depth, mempool slippage vectors, and gas metrics.</li>
+  <li><b>2. Strategist (LLM):</b> Evaluates telemetry inputs via off-chain LLM reasoning models, enforces risk parameters, and synthesizes cryptographically signed intents.</li>
+  <li><b>3. Executor Relayer:</b> Transmits verified <code>Keccak256 Intent Hashes</code> directly to <code>AgentVault.sol</code> via pre-authorized Session Keys.</li>
+  <li><b>Non-Custodial Session Delegation:</b> Allows users to grant temporary execution sessions without sharing or risking primary private keys.</li>
+</ul>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<hr />
 
-## Learn More
+<h2>🚀 Quick Start</h2>
 
-To learn more about Next.js, take a look at the following resources:
+<p><b>1. Clone the Repository</b></p>
+<pre>git clone https://github.com/forumevi/arc-verifiable-ai-agent.git
+cd arc-verifiable-ai-agent</pre>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<p><b>2. Install Dependencies</b></p>
+<pre>npm install</pre>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<p><b>3. Local Development Server</b></p>
+<pre>npm run dev</pre>
 
-## Deploy on Vercel
+<hr />
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<h2>📄 Verified Smart Contracts</h2>
+<ul>
+  <li><b>Network:</b> Arc Testnet</li>
+  <li><b>Target Vault:</b> <code>0xB983993996c89CFFc9E9F81E0220f9048232f112</code></li>
+</ul>
