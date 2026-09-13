@@ -2,11 +2,22 @@
 
 <p>An autonomous, verifiable multi-agent protocol on <b>Arc Testnet</b> that decouples off-chain LLM reasoning from on-chain execution using cryptographic intent verification (<code>Keccak256</code>) and delegated Session Keys.</p>
 
-<p><b>🌐 Live Demo:</b> <a href="https://arc-verifiable-ai-agent.vercel.app">https://arc-verifiable-ai-agent.vercel.app</a></p>
+<p><b>🌐 Live Demo:</b> <a href="https://arc-verifiable-ai-agent.vercel.app" target="_blank">https://arc-verifiable-ai-agent.vercel.app</a></p>
 
 <hr />
 
-<h2>🌟 Key Architecture & Swarm Pipeline</h2>
+<h2>📐 System Architecture & Workflow</h2>
+
+<pre>
+[ Arc RPC / DEX ] ──(Telemetry)──> [ 1. Sentinel Node ]
+                                             │
+                                             ▼
+[ AgentVault.sol ] <──(Session Key)── [ 3. Executor ] <──(Signed Intent)── [ 2. Strategist (LLM) ]
+</pre>
+
+<hr />
+
+<h2>🌟 Key Features & Swarm Pipeline</h2>
 
 <ul>
   <li><b>1. Sentinel Node (Telemetry):</b> Continuously polls Arc RPC nodes to stream real-time DEX liquidity depth, mempool slippage vectors, and gas metrics.</li>
@@ -33,6 +44,6 @@ cd arc-verifiable-ai-agent</pre>
 
 <h2>📄 Verified Smart Contracts</h2>
 <ul>
-  <li><b>Network:</b> Arc Testnet</li>
-  <li><b>Target Vault:</b> <code>0xB983993996c89CFFc9E9F81E0220f9048232f112</code></li>
+  <li><b>Network:</b> Arc Testnet (Chain ID: 5042002)</li>
+  <li><b>Target Vault:</b> <a href="https://testnet.arcscan.app/address/0xB983993996c89CFFc9E9F81E0220f9048232f112" target="_blank"><code>0xB983993996c89CFFc9E9F81E0220f9048232f112</code></a></li>
 </ul>
